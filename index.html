@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="icon" href="loogo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/ml5@1/dist/ml5.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <title>Facial Expression Detector | Saleh Ibne Shahid</title>
+  </head>
+  <body class="container text-light">
+    <style type="text/css">
+      body {
+      background-image: url("bg_pic.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
+      justify-content: center;
+      }
+      ::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 50px;
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: grey; 
+        border-radius: 10px;
+      }
+    </style>
+    <center>
+      <h1 class="txthdr toptext mt-4">Facial Expression Recognition Website</h1><br><br>
+      <h4 class="txtwrn mt-4">This model can identify happy, sad, wow and smile facial expressions </h4>
+      <br><br>
+      <h3 class="text-warning">Say, 'Open camera'</h3>
+      <br>
+      <textarea id="textbox" class="form-control" readonly="true"></textarea>
+      <br>
+      <button class="btn btn-outline-light " id="start-btn" onclick="start()">Start</button>
+      <br>
+      <label class="fw-bold text-warning mt-4">Webcam Preview: </label>
+      <div id="camera"></div>
+      <br><br>
+      <button class="btn btn-outline-light  " id="start-btn" onclick="take_pic()">Capture Images to Identify Objects</button>
+      <br><br>
+      <label class="fw-bold text-warning">Captured Image: </label>
+      <div id="result"></div>
+      <br><br>
+      <button class="btn btn-outline-light  afacad-flux" id="start-btn" onclick="identify()">Start Identification Process</button>
+      <br><br>
+      <h5 class=" text-warning afacad-flux">Expression: <span id="object"></span></h5><br><br><br>
+    </center>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js" integrity="sha512-dQIiHSl2hr3NWKKLycPndtpbh5iaHLo6MwrXm7F0FM5e+kL2U16oE9uIwPHUl6fQBeCthiEuV/rzP3MiAB8Vfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
