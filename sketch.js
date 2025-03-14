@@ -40,7 +40,7 @@ recognition.onresult=function(event){
 	}
 }
 
-classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/hJ4vEq-dv/model.json",modelLoaded);
+classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/KFMBr_lAh/model.json",modelLoaded);
 
 function modelLoaded() {
   	console.log('Model ready');
